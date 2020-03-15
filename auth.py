@@ -14,4 +14,4 @@ def auth_func(message):
         else:
             bot.send_message(message.chat.id, "пащел нахуй")
     else:
-        print("incorrect format")
+        bot.send_message(message.chat.id, "incorrect format")

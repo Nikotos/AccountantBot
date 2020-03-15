@@ -31,6 +31,7 @@ class SessionManager:
     def addSession(self, sessionID, username, password):
         if sessionID not in self.sessionMap:
             authResult = self.__auth__(username, password)
+            print(authResult)
             if authResult:
                 self.sessionMap[sessionID] = Session(sessionID, username)
                 return True
@@ -53,9 +54,6 @@ class SessionManager:
             return True
         else:
             return False
-
-
-
 
 """
     User oriented object
